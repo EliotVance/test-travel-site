@@ -3,6 +3,7 @@ const path = require("path");
 const postCSSPlugins = require("postcss-simple-vars");
 require("postcss-nested");
 require("autoprefixer");
+require("postcss-import");
 
 module.exports = {
   entry: "./app/assets/scripts/App.js",
@@ -25,6 +26,7 @@ module.exports = {
               postcssOptions: {
                 plugins: [
                   postCSSPlugins,
+                  require.resolve("postcss-import"),
                   require.resolve("postcss-simple-vars"),
                   require.resolve("postcss-nested"),
                   require.resolve("autoprefixer"),
