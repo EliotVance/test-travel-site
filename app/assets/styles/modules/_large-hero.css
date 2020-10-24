@@ -45,9 +45,11 @@
     text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
     max-width: 20rem;
     margin: 1.5rem auto;
+
+    @mixin atSmall {
+      max-width: 28rem;
+      font-size: 1.875rem;
+    }
   }
 
-  @mixin atSmall {
-    font-size: 1.875;
-  }
 }
