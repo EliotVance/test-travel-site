@@ -11,6 +11,22 @@
     text-align: center;
   }
 
+  &--center-on-small {
+    text-align: center;
+
+    @mixin atSmall {
+      text-align: left;
+    }
+  }
+
+  &--t-margin-on-small {
+    margin-top: 1.25rem;
+
+    @mixin atSmall {
+      margin-top: 0;
+    }
+  }
+
   &--orange {
     color: $mainOrange;
   }
@@ -19,7 +35,7 @@
     font-size: 1.2rem;
 
     @mixin atSmall {
-      font-size: 1.875rem;      
+      font-size: 1.875rem;
     }
   }
 
@@ -30,11 +46,10 @@
   }
 
   &--b-margin-small {
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
   }
 
   &--b-margin-large {
     margin-bottom: 1.6em;
   }
-
 }
