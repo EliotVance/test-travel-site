@@ -1,6 +1,11 @@
 .row {
+  &--equal-height {
+    & > div {
+      display: flex;
+    }
+  }
 
-  @mixin atMedium {
+  @mixin atLarge {
     display: flex;
 
     &--1 {
@@ -26,17 +31,21 @@
     &--7 {
       flex: 7;
     }
-  
+
     &--8 {
       flex: 8;
     }
-    
+
     &--r-margin {
       margin-right: 2rem;
     }
 
     &--r-margin-large {
       margin-right: 5rem;
+    }
+    
+    &--medium-no-columns {
+      display: static;
     }
   }
 }

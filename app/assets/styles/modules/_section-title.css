@@ -9,8 +9,19 @@
     margin-bottom: 5rem;
   }
 
+  &--b-margin-huge-until-medium {
+    margin-bottom: 3rem;
+    @mixin atMedium {
+      margin-bottom: 3rem;
+    }
+  }
+
   strong {
     font-weight: 500;
+  }
+
+  &--blue {
+    color: $mainBlue;
   }
 
   &__icon {
