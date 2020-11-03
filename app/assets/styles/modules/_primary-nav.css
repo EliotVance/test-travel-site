@@ -1,0 +1,44 @@
+.primary-nav {
+  &--pull-right {
+    @mixin atMedium {
+      float: right;
+    }
+  }
+
+  li {
+    display: inline-block;
+    list-style: none;
+    padding-right: 0.75rem;
+    @mixin atMedium {
+      float: left;
+      display: block;
+      padding-right: 1.25rem;
+    }
+  }
+
+  li:last-child {
+    padding-right: 0;
+    
+    @mixin atMedium {
+      padding-right: 1.25rem;
+    }
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-top: 0.5rem;
+    font-size: .8rem;
+    background: rgba($mainBlue, 0.75);
+
+    @mixin atMedium {
+      font-size: 1rem;
+      padding: 0.75rem 0;
+      margin-top: 0;
+      background: transparent;
+    }
+  }
+}

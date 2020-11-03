@@ -9,6 +9,7 @@
   &__text-content {
     position: absolute;
     top: 50%;
+    padding-top: 3.75rem;
     transform: translateY(-50%);
     left: 0;
     width: 100%;

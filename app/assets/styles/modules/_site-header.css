@@ -1,0 +1,103 @@
+.site-header {
+  position: absolute;
+  width: 100%;
+  padding: 0.5125rem;
+  z-index: 1;
+  transition: background-color .3s ease-out;
+
+  &--expanded {
+    background-color: rgba($mainBlue, .6);
+  }
+
+  @mixin atMedium {
+    background-color: rgba($mainBlue, 0.3);
+  }
+
+  &__btn-container {
+
+    @mixin atMedium {
+      float: right;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $mainBlue;
+    padding: 1rem 0 0.5rem 0;
+    text-align: center;
+
+    @mixin atMedium {
+      left: auto;
+      width: auto;
+      padding: 1.5rem 2.125rem;
+    }
+  }
+
+  &__menu-icon {
+    width: 1.25rem;
+    height: 1rem;
+    position: absolute;
+    z-index: 10;
+    top: 1rem;
+    right: 1rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1.25rem;
+      height: 0.125rem;
+      top: 0;
+      left: 0;
+      background-color: white;
+    }
+
+    &__middle {
+      position: absolute;
+      width: 1.25rem;
+      height: 0.125rem;
+      top: 0.45rem;
+      left: 0;
+      background-color: white;
+    }
+    
+    &::after {
+      content: "";
+      position: absolute;
+      width: 1.25rem;
+      height: 0.125rem;
+      bottom: 0;
+      left: 0;
+      background-color: white;
+    }
+
+    @mixin atMedium {
+      display: none;
+    }
+  }
+
+  &__menu-content {
+    opacity: 0;
+    transform: scale(1.25);
+    transition: all .3s ease-out;
+    position: relative;
+    z-index: -10;
+    padding-top: 5.5rem;
+    text-align: center;
+
+    @mixin atMedium {
+      opacity: 1;
+      z-index: 1;
+      transform: scale(1);
+      padding-top: 0;
+    }
+
+    &--visible {
+      opacity: 1;
+      z-index: 1;
+      transform: scale(1);
+    }
+  }
+}
