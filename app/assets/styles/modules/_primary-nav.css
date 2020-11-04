@@ -39,6 +39,10 @@
       padding: 0.75rem 0;
       margin-top: 0;
       background: transparent;
+
+      &.is-current-link {
+        color: #fabb69;
+      }
     }
   }
 }
